@@ -32,6 +32,7 @@ public:
         delete[] data;
     }
 
+    //O(1)
     void push_back(T e){
         //assert( size < capacity);
         if( size == capacity){
@@ -41,8 +42,14 @@ public:
         data[size++] = e;
     }
 
+    //O(1)
     T pop_back(){
         assert(size > 0);
-        return data[--size];
+        T ret = data[size-1];
+        size --;
+        if( size == capacity/4 ){
+            resize( capacity/2 );
+        }
+        return ret;
     }
 };

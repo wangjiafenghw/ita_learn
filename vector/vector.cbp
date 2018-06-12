@@ -31,6 +31,8 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="main.cpp" />
+		<Unit filename="myVector.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
